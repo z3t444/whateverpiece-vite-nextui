@@ -102,10 +102,10 @@ export default function IndexPage() {
           <h1 className="text-center text-xl font-semibold">Available Components kit</h1>
           <div className="flex items-center gap-10 justify-around mt-12">
             <div title="forLeftFeature">
-              <ul className="flex items-center">
+              <div data-aos="zoom-out" data-aos-duration="1500" className="flex items-center">
                 <img src={LaptopScreen} className="-rotate-6" alt="laptop Screen" width={440} />
                 <img className="-ml-14 mt-2" src={MobileScreen} alt="Mobile Screen" width={120} />
-              </ul>
+              </div>
               <li className="list-none"></li>
             </div>
             <AvailableUtils />

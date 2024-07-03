@@ -9,13 +9,18 @@ import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import DataUtilsCard from "./utils/NameDesk";
 import AvailableUtils from "./utils/AvailableUtils";
+import HeadingBoxSearch from "./index/HeadingBoxSearch";
+import HeadingBoxDate from "./index/headingBoxDate";
+import SearchComponents from "./index/SearchComponents";
 
 import HeroAsset from "./asset/Capture.png";
 import LaptopScreen from "./asset/laptopscreen.svg";
 import MobileScreen from "./asset/PhoneDesign.svg";
 import IdeaIcons from "./asset/Idea.svg";
 import DesignIcons from "./asset/Design.svg";
-
+import RightIconsSearch from "./asset/RightIconsSearch";
+import Date from "./asset/date.svg";
+import "../styles/animation.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -128,6 +133,29 @@ export default function IndexPage() {
               Modern Design
             </Button>
           </a>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-24">
+            <div className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
+              <HeadingBoxSearch />
+
+              <div className="mt-20 mb-32 mr-10 ml-10 scale-85 lg:scale-110 flex items-center justify-center">
+                <div className="relative search-animate flex items-center gap-2">
+                  <SearchComponents />
+                  <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white">
+                    <RightIconsSearch />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
+              <HeadingBoxDate />
+
+              <div className="flex animate-date justify-center mt-9">
+                <img src={Date} width={200} alt="" />
+              </div>
+            </div>
+          </div>
         </main>
       </section>
     </DefaultLayout>

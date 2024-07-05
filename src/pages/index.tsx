@@ -105,11 +105,19 @@ export default function IndexPage() {
       <section>
         <main className="mt-24">
           <h1 className="text-center text-xl font-semibold">Available Components kit</h1>
-          <div className="flex items-center gap-10 justify-around mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 justify-center lg:justify-around mt-12">
             <div title="forLeftFeature">
-              <div data-aos="zoom-out" data-aos-duration="1500" className="flex items-center">
-                <img src={LaptopScreen} className="-rotate-6" alt="laptop Screen" width={440} />
-                <img className="-ml-14 mt-2" src={MobileScreen} alt="Mobile Screen" width={120} />
+              <div className="hidden lg:block">
+                <div data-aos="zoom-out" data-aos-duration="1500" className="flex -ml-14 lg:-ml-0  items-center">
+                  <img src={LaptopScreen} className="-rotate-6" alt="laptop Screen" width={440} />
+                  <img className="-ml-14 mt-2" src={MobileScreen} alt="Mobile Screen" width={120} />
+                </div>
+              </div>
+              <div className="block lg:hidden">
+                <div data-aos="zoom-out" data-aos-duration="1500" className="flex lg:-ml-0 items-center">
+                  <img src={LaptopScreen} className="-rotate-6" alt="laptop Screen" width={280} />
+                  <img className="-ml-14 mt-2" src={MobileScreen} alt="Mobile Screen" width={90} />
+                </div>
               </div>
               <li className="list-none"></li>
             </div>
@@ -137,7 +145,6 @@ export default function IndexPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-24">
             <div className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
               <HeadingBoxSearch />
-
               <div className="mt-20 mb-32 mr-10 ml-10 scale-85 lg:scale-110 flex items-center justify-center">
                 <div className="relative search-animate flex items-center gap-2">
                   <SearchComponents />
@@ -150,7 +157,6 @@ export default function IndexPage() {
 
             <div className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
               <HeadingBoxDate />
-
               <div className="flex animate-date justify-center mt-9">
                 <img src={Date} width={200} alt="" />
               </div>

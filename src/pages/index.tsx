@@ -10,8 +10,10 @@ import DefaultLayout from "@/layouts/default";
 import DataUtilsCard from "./utils/NameDesk";
 import AvailableUtils from "./utils/AvailableUtils";
 import HeadingBoxSearch from "./index/HeadingBoxSearch";
+import HeadingLandingBlog from "./index/HeadingLandingBlog";
 import HeadingBoxDate from "./index/headingBoxDate";
 import SearchComponents from "./index/SearchComponents";
+import HeadingAllComponents from "./index/HeadingAllComponents";
 
 import HeroAsset from "./asset/Capture.png";
 import LaptopScreen from "./asset/laptopscreen.svg";
@@ -19,10 +21,13 @@ import MobileScreen from "./asset/PhoneDesign.svg";
 import IdeaIcons from "./asset/Idea.svg";
 import DesignIcons from "./asset/Design.svg";
 import RightIconsSearch from "./asset/RightIconsSearch";
+import ContentLanding from "./asset/ContentLanding.svg";
+import AllComponentsLayout from "./asset/AllComponentsLayout.svg";
 import Date from "./asset/date.svg";
 import "../styles/animation.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Switch } from "@nextui-org/switch";
 AOS.init();
 
 export default function IndexPage() {
@@ -52,32 +57,36 @@ export default function IndexPage() {
         </section>
 
         <div className="flex mt-10 gap-3">
-          <Link
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="200"
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}>
-            Documentation
-          </Link>
-          <Link
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="300"
-            isExternal
-            className={buttonStyles({
-              variant: "bordered",
-              radius: "full",
-            })}
-            href={siteConfig.links.github}>
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
+          <ul className="hover:scale-95 duration-300">
+            <Link
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              data-aos-delay="200"
+              isExternal
+              className={buttonStyles({
+                color: "primary",
+                radius: "full",
+                variant: "shadow",
+              })}
+              href={siteConfig.links.docs}>
+              See Other
+            </Link>
+          </ul>
+          <ul className="hover:scale-95 duration-300">
+            <Link
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              data-aos-delay="300"
+              isExternal
+              className={buttonStyles({
+                variant: "bordered",
+                radius: "full",
+              })}
+              href={siteConfig.links.github}>
+              <GithubIcon size={20} />
+              GitHub
+            </Link>
+          </ul>
         </div>
 
         <div className="mt-8">
@@ -143,23 +152,47 @@ export default function IndexPage() {
           </a>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-24">
-            <div className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="500"
+              className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
               <HeadingBoxSearch />
-              <div className="mt-20 mb-32 mr-10 ml-10 scale-85 lg:scale-110 flex items-center justify-center">
-                <div className="relative search-animate flex items-center gap-2">
-                  <SearchComponents />
-                  <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white">
-                    <RightIconsSearch />
-                  </div>
-                </div>
+              <div className="flex items-center search-animate justify-center gap-2">
+                <SearchComponents />
               </div>
             </div>
 
-            <div className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="500"
+              className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl p-7">
               <HeadingBoxDate />
               <div className="flex animate-date justify-center mt-9">
-                <img src={Date} width={200} alt="" />
+                <img src={Date} width={200} />
               </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-5">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="dark:bg-gradient-to-br overflow-hidden  dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-3xl">
+              <HeadingLandingBlog />
+              <div className="lg:mt-20 lg:scale-110 flex">
+                <ul className="flex justify-center items-center lg:gap-10">
+                  <img src={ContentLanding} className="ml-5" width={200} alt="" />
+                  <Switch defaultSelected color="default"></Switch>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              className="dark:bg-gradient-to-br dark:from-[#1d1c20] dark:via-neutral-950 dark:to-black bg-gradient-to-br from-neutral-200 to-neutral-300 overflow-hidden rounded-3xl">
+              <HeadingAllComponents />
+              <img src={AllComponentsLayout} />
             </div>
           </div>
         </main>

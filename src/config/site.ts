@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Whatever Design UIkit",
+  description: "Create your Design UI with My platform Whatever DesignKit",
   navItems: [
     {
       label: "Home",
@@ -60,10 +60,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui-docs-v2.vercel.app",
+    github: "https://github.com/z3t444",
+    instagram: "https://www.instagram.com/zzz_3t44",
+    docs: "",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
   },
 };

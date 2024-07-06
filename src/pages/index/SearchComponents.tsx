@@ -3,8 +3,8 @@ import { title } from "@/components/primitives";
 
 export default function SearchComponents() {
   return (
-    <div>
-      <input type="text" placeholder="An app to Design" className="max-w-60 pl-10 pr-16 py-3 rounded-full bg-[#39393f] text-white focus:outline-none  placeholder-gray-400" />
+    <div className="flex items-center mt-10 mb-20 lg:mt-28 scale-80 lg:scale-100">
+      <input type="text" placeholder="An app to Design" className="max-w-60 lg:pl-10 lg:pr-16 py-3 rounded-full bg-[#39393f] text-white focus:outline-none  placeholder-gray-400" />
       <Button radius="full">
         <span className={title({ size: "litlesm" })}>Generate</span>
       </Button>

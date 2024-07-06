@@ -19,7 +19,7 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
           href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template"
           title="nextui.org homepage">
           <span className="text-default-600">Powered by</span>
-          <p className="text-primary">NextUI</p>
+          <p className="text-primary">WhateverUI</p>
         </Link>
       </footer>
     </div>

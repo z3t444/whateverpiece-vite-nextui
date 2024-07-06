@@ -14,7 +14,6 @@ import HeadingLandingBlog from "./index/HeadingLandingBlog";
 import HeadingBoxDate from "./index/headingBoxDate";
 import SearchComponents from "./index/SearchComponents";
 import HeadingAllComponents from "./index/HeadingAllComponents";
-
 import HeroAsset from "./asset/Capture.png";
 import LaptopScreen from "./asset/laptopscreen.svg";
 import MobileScreen from "./asset/PhoneDesign.svg";

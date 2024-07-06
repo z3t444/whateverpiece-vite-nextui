@@ -20,7 +20,6 @@ import LaptopScreen from "./asset/laptopscreen.svg";
 import MobileScreen from "./asset/PhoneDesign.svg";
 import IdeaIcons from "./asset/Idea.svg";
 import DesignIcons from "./asset/Design.svg";
-import RightIconsSearch from "./asset/RightIconsSearch";
 import ContentLanding from "./asset/ContentLanding.svg";
 import AllComponentsLayout from "./asset/AllComponentsLayout.svg";
 import Date from "./asset/date.svg";
